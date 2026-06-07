@@ -22,10 +22,10 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run ESLint
-        run: npx --no-install eslint assets/js/calculator.js
+        run: ./node_modules/.bin/eslint assets/js/calculator.js
 
   test:
     name: Unit Tests (Node ${{ matrix.node-version }})
