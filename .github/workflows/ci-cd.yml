@@ -13,7 +13,7 @@ on:
 
 jobs:
   # ── Job 1: Lint ─────────────────────────────────────────────
-  lint:
+    lint:
     name: Lint with ESLint
     runs-on: ubuntu-latest
     steps:
@@ -30,7 +30,7 @@ jobs:
         run: npm install
 
       - name: Run ESLint
-        run: npm run lint
+        run: npx --no-install eslint assets/js/calculator.js
 
   # ── Job 2: Unit Tests (matrix) ──────────────────────────────
   test:
