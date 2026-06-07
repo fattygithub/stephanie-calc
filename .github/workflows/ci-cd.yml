@@ -12,7 +12,6 @@ on:
     branches: [main]
 
 jobs:
-
   # ── Job 1: Lint ─────────────────────────────────────────────
   lint:
     name: Lint with ESLint
@@ -31,7 +30,7 @@ jobs:
         run: npm install
 
       - name: Run ESLint
-        run: node_modules/.bin/eslint assets/js/calculator.js
+        run: npm run lint
 
   # ── Job 2: Unit Tests (matrix) ──────────────────────────────
   test:
