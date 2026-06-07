@@ -1,0 +1,19 @@
+{
+  "name": "stephanie-calc",
+  "version": "1.0.0",
+  "description": "SEN 482 CI/CD Lab - Calculator by Daniel Stephanie Ugbedeojo (VUG/SEN/22/7155)",
+  "main": "assets/js/calculator.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest-cli/bin/jest.js --passWithNoTests",
+    "lint": "eslint assets/js/calculator.js",
+    "lint:fix": "eslint assets/js/calculator.js --fix"
+  },
+  "author": "Daniel Stephanie Ugbedeojo",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "jest": "^29.0.0"
+  }
+}
