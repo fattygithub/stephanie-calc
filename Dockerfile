@@ -17,7 +17,7 @@ RUN npm install --include=dev && ls node_modules/.bin/eslint
 COPY assets/ ./assets/
 COPY __tests__/ ./__tests__/
 
-RUN node_modules/.bin/eslint assets/js/calculator.js
+RUN ./node_modules/.bin/eslint assets/js/calculator.js assets/js/calculator.lib.js
 
 RUN node --experimental-vm-modules node_modules/jest-cli/bin/jest.js --passWithNoTests
 

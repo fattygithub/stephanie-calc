@@ -5,7 +5,7 @@ import {
   insertEuler,
   insertEulerPow,
   formatDisplay,
-} from "../assets/js/calculator.js";
+} from "../assets/js/calculator.lib.js";
 
 // ── Basic arithmetic ──────────────────────────────────────────
 

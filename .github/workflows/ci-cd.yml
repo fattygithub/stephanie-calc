@@ -25,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Run ESLint
-        run: ./node_modules/.bin/eslint assets/js/calculator.js
+        run: ./node_modules/.bin/eslint assets/js/calculator.js assets/js/calculator.lib.js
 
   test:
     name: Unit Tests (Node ${{ matrix.node-version }})

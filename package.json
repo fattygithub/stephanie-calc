@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest-cli/bin/jest.js --passWithNoTests",
-    "lint": "eslint assets/js/calculator.js",
+    "lint": "eslint assets/js/calculator.js assets/js/calculator.lib.js",
     "lint:fix": "eslint assets/js/calculator.js --fix"
   },
   "author": "Daniel Stephanie Ugbedeojo",
