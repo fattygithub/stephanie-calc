@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stephanie's Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/calculator.css" />
+</head>
+
+<body>
+  <div class="app-wrapper">
+    <header class="calc-header">
+      <div class="header-inner">
+        <span class="header-label">SEN 482 · CI/CD Lab</span>
+        <h1 class="header-name">Daniel Stephanie Ugbedeojo</h1>
+        <span class="header-tag">VUG/SEN/22/7155</span>
+      </div>
+    </header>
+    <main class="calc-card">
+      <div class="display-area">
+        <div class="display-hint" id="display-hint">&nbsp;</div>
+        <div class="display-expr" id="expr-display">0</div>
+      </div>
+      <div class="btn-grid">
+        <button class="btn btn-clear" onclick="clearResult()">AC</button>
+        <button class="btn btn-util" onclick="backspace()">&#8592;</button>
+        <button class="btn btn-euler" onclick="insertE()" title="Euler's number ≈ 2.71828">e</button>
+        <button class="btn btn-euler" onclick="insertEx()" title="e raised to x">e<sup>x</sup></button>
+
+        <button class="btn btn-num" onclick="append('7')">7</button>
+        <button class="btn btn-num" onclick="append('8')">8</button>
+        <button class="btn btn-num" onclick="append('9')">9</button>
+        <button class="btn btn-op" onclick="append('/')">&#247;</button>
+
+        <button class="btn btn-num" onclick="append('4')">4</button>
+        <button class="btn btn-num" onclick="append('5')">5</button>
+        <button class="btn btn-num" onclick="append('6')">6</button>
+        <button class="btn btn-op" onclick="append('*')">&#215;</button>
+
+        <button class="btn btn-num" onclick="append('1')">1</button>
+        <button class="btn btn-num" onclick="append('2')">2</button>
+        <button class="btn btn-num" onclick="append('3')">3</button>
+        <button class="btn btn-op" onclick="append('-')">&#8722;</button>
+
+        <button class="btn btn-num btn-zero" onclick="append('0')">0</button>
+        <button class="btn btn-num" onclick="append('.')">.</button>
+        <button class="btn btn-op" onclick="append('+')">+</button>
+        <button class="btn btn-equals" onclick="calculate()">=</button>
+      </div>
+      <div class="euler-strip" id="euler-strip" style="display:none;">
+        <span class="euler-icon">e</span>
+        <span id="euler-info"></span>
+      </div>
+    </main>
+  </div>
+  <script src="/assets/js/calculator.js"></script>
+</body>
+
+</html>

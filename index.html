@@ -3,57 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stephanie's Calculator</title>
+  <title>Stephanie's SEN 482 Project</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/calculator.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f0f4ff;
+      --surface: #ffffff;
+      --border: #dde2f0;
+      --text: #1a1d2e;
+      --muted: #7880a0;
+      --amber: #d97706;
+      --indigo: #4f46e5;
+      --shadow: 0 20px 60px rgba(80,90,160,0.13);
+    }
+    body {
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      padding: 24px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+    .badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+      letter-spacing: -0.02em;
+    }
+    .matric {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--amber);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin-bottom: 24px;
+      display: block;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 24px 0;
+    }
+    .description {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .description strong {
+      color: var(--text);
+    }
+    .btn-calc {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--indigo);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 13px;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-calc:hover {
+      background: #4338ca;
+      transform: translateY(-1px);
+    }
+    .btn-calc:active { transform: scale(0.97); }
+    .arrow { font-size: 1.1rem; }
+    .footer-note {
+      margin-top: 28px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+  </style>
 </head>
 <body>
-  <div class="app-wrapper">
-    <header class="calc-header">
-      <div class="header-inner">
-        <span class="header-label">SEN 482 · CI/CD Lab</span>
-        <h1 class="header-name">Daniel Stephanie Ugbedeojo</h1>
-        <span class="header-tag">VUG/SEN/22/7155</span>
-      </div>
-    </header>
-    <main class="calc-card">
-      <div class="display-area">
-        <div class="display-hint" id="display-hint">&nbsp;</div>
-        <div class="display-expr" id="expr-display">0</div>
-      </div>
-      <div class="btn-grid">
-        <button class="btn btn-clear"  onclick="clearResult()">AC</button>
-        <button class="btn btn-util"   onclick="backspace()">&#8592;</button>
-        <button class="btn btn-euler"  onclick="insertE()" title="Euler's number ≈ 2.71828">e</button>
-        <button class="btn btn-euler"  onclick="insertEx()" title="e raised to x">e<sup>x</sup></button>
-
-        <button class="btn btn-num"   onclick="append('7')">7</button>
-        <button class="btn btn-num"   onclick="append('8')">8</button>
-        <button class="btn btn-num"   onclick="append('9')">9</button>
-        <button class="btn btn-op"    onclick="append('/')">&#247;</button>
-
-        <button class="btn btn-num"   onclick="append('4')">4</button>
-        <button class="btn btn-num"   onclick="append('5')">5</button>
-        <button class="btn btn-num"   onclick="append('6')">6</button>
-        <button class="btn btn-op"    onclick="append('*')">&#215;</button>
-
-        <button class="btn btn-num"   onclick="append('1')">1</button>
-        <button class="btn btn-num"   onclick="append('2')">2</button>
-        <button class="btn btn-num"   onclick="append('3')">3</button>
-        <button class="btn btn-op"    onclick="append('-')">&#8722;</button>
-
-        <button class="btn btn-num btn-zero" onclick="append('0')">0</button>
-        <button class="btn btn-num"   onclick="append('.')">.</button>
-        <button class="btn btn-op"    onclick="append('+')">+</button>
-        <button class="btn btn-equals" onclick="calculate()">=</button>
-      </div>
-      <div class="euler-strip" id="euler-strip" style="display:none;">
-        <span class="euler-icon">e</span>
-        <span id="euler-info"></span>
-      </div>
-    </main>
+  <div class="card">
+    <span class="badge">Veritas University Abuja · SEN 482</span>
+    <h1>Daniel Stephanie Ugbedeojo</h1>
+    <span class="matric">VUG/SEN/22/7155</span>
+    <hr class="divider" />
+    <p class="description">
+      This project demonstrates a full <strong>CI/CD pipeline</strong> built with
+      GitHub Actions, Docker, and FTPS deployment for a browser-based calculator
+      featuring <strong>Euler's number (e, eˣ)</strong> as a unique functionality.
+    </p>
+    <a href="/calculator" class="btn-calc">
+      Open Calculator <span class="arrow">→</span>
+    </a>
+    <p class="footer-note">Unique feature: Euler's number · e ≈ 2.71828</p>
   </div>
-  <script src="assets/js/calculator.js"></script>
 </body>
 </html>
