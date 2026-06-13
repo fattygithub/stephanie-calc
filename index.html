@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stephanie's SEN 482 Project</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     :root {
       --bg: #f0f4ff;
       --surface: #ffffff;
@@ -16,8 +26,9 @@
       --muted: #7880a0;
       --amber: #d97706;
       --indigo: #4f46e5;
-      --shadow: 0 20px 60px rgba(80,90,160,0.13);
+      --shadow: 0 20px 60px rgba(80, 90, 160, 0.13);
     }
+
     body {
       background: var(--bg);
       min-height: 100vh;
@@ -28,6 +39,7 @@
       color: var(--text);
       padding: 24px;
     }
+
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -38,6 +50,7 @@
       width: 100%;
       text-align: center;
     }
+
     .badge {
       font-family: 'Space Mono', monospace;
       font-size: 0.62rem;
@@ -47,6 +60,7 @@
       display: block;
       margin-bottom: 16px;
     }
+
     h1 {
       font-size: 1.75rem;
       font-weight: 700;
@@ -54,6 +68,7 @@
       margin-bottom: 6px;
       letter-spacing: -0.02em;
     }
+
     .matric {
       font-family: 'Space Mono', monospace;
       font-size: 0.68rem;
@@ -63,20 +78,24 @@
       margin-bottom: 24px;
       display: block;
     }
+
     .divider {
       border: none;
       border-top: 1px solid var(--border);
       margin: 24px 0;
     }
+
     .description {
       font-size: 0.95rem;
       color: var(--muted);
       line-height: 1.7;
       margin-bottom: 32px;
     }
+
     .description strong {
       color: var(--text);
     }
+
     .btn-calc {
       display: inline-flex;
       align-items: center;
@@ -91,12 +110,20 @@
       text-decoration: none;
       transition: background 0.15s, transform 0.1s;
     }
+
     .btn-calc:hover {
       background: #4338ca;
       transform: translateY(-1px);
     }
-    .btn-calc:active { transform: scale(0.97); }
-    .arrow { font-size: 1.1rem; }
+
+    .btn-calc:active {
+      transform: scale(0.97);
+    }
+
+    .arrow {
+      font-size: 1.1rem;
+    }
+
     .footer-note {
       margin-top: 28px;
       font-family: 'Space Mono', monospace;
@@ -106,11 +133,11 @@
     }
   </style>
 </head>
+
 <body>
   <div class="card">
     <span class="badge">Veritas University Abuja · SEN 482</span>
     <h1>Daniel Stephanie Ugbedeojo</h1>
-    <span class="matric">VUG/SEN/22/7155</span>
     <hr class="divider" />
     <p class="description">
       This project demonstrates a full <strong>CI/CD pipeline</strong> built with
@@ -123,4 +150,5 @@
     <p class="footer-note">Unique feature: Euler's number · e ≈ 2.71828</p>
   </div>
 </body>
+
 </html>
